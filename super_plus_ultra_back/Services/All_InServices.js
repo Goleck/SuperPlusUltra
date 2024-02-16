@@ -26,8 +26,34 @@ const fetchAll_In6Services = () => {
     });
 };
 
+const AjouterProduit = (nouveauProduit) => {
+    return new Promise((resolve, reject) => {
+        let sql = `INSERT INTO produits (Titre, Editeur, Genre, Sortie, Image, Etat, Descriptions, Quantite, Prix, Id_Categorie )
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+    
+        const values = [
+            nouveauProduit.Titre,
+            nouveauProduit.Editeur,
+            nouveauProduit.Genre,
+            nouveauProduit.Sortie,
+            nouveauProduit.Image,
+            nouveauProduit.Etat,
+            nouveauProduit.Descriptions,
+            nouveauProduit.Quantite,
+            nouveauProduit.Prix,
+            nouveauProduit.Id_Categorie
+        ];
+
+        conn.query(sql, values, (err, result, field) => {
+            if(err) return reject(err);
+            resolve(result);
+        });
+    });
+}
+
 
 module.exports = {
     fetchAll_InServices,
-    fetchAll_In6Services
+    fetchAll_In6Services,
+    AjouterProduit
 };

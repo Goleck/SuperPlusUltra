@@ -39,8 +39,41 @@ const AjouterUtilisateur = (utilisateur) => {
     });
 }
 
+const ProfilModificationService = (utilisateur) => {
+    return new Promise((resolve, reject) => {
+        console.log(utilisateur);
+
+        if (utilisateur === undefined || utilisateur.id_Utilisateur === undefined) {
+            return reject("L'ID de l'utilisateur n'est pas défini.");
+        }
+
+        let sql = `UPDATE utilisateur SET 
+            Nom=?,
+            Prenom=?,
+            Email=?,
+            Adresse=?
+            WHERE id_Utilisateur = ?`;
+
+        const values = [
+            utilisateur.Nom,
+            utilisateur.Prenom,
+            utilisateur.Email,
+            utilisateur.Adresse,
+            utilisateur.id_Utilisateur 
+        ];
+
+        conn.query(sql, values, (err, result) => {
+            if (err) return reject(err);
+            resolve(result);
+            console.log(sql);
+        });
+    });
+};
+
+
 module.exports = {
     ToutUtilisateurService,
     ConnectionService,
-    AjouterUtilisateur
+    AjouterUtilisateur,
+    ProfilModificationService
 }

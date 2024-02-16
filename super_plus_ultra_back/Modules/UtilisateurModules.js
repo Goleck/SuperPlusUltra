@@ -32,9 +32,20 @@ router.post("/Connection", async (req, res) => {
     }
 });
 
-router.post("/inscription", async (req, res) => {
+router.post("/Inscription", async (req, res) => {
     try {
         const result = await utilisateurServices.AjouterUtilisateur(req.body);
+        res.status(200).json(result);
+    } catch (err) {
+        console.error("Oops...", err);
+        res.status(500).json({ "message": "Error" + err.sqlMessage });
+    }
+});
+
+router.put("/Profil", async (req, res) => {
+    try {
+        const data= req.body;
+        const result = await utilisateurServices.ProfilModificationService(data);
         res.status(200).json(result);
     } catch (err) {
         console.error("Oops...", err);
