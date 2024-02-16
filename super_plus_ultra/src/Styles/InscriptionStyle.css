@@ -1,0 +1,52 @@
+.Formulaire_Inscription_Total {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: rgb(254, 101, 195);
+    background: linear-gradient(0deg, rgba(254, 101, 195, 1) 0%, rgba(93, 23, 235, 1) 100%);
+    border-radius: 20px;
+    width: 80%; 
+    margin: 1em auto; 
+}
+
+.Form {
+    width: 100%;
+}
+
+.Form input {
+    font-weight: bolder;
+    color: #000000;
+    padding: 10px;
+    background-color: rgb(254, 101, 195);
+    border-radius: 20px;
+    width: 90%;
+    margin: 1em auto;
+    text-align: center; 
+}
+
+input::placeholder {
+    color: #FFFF;
+    font-weight: bolder;
+}
+
+.Form button {
+    justify-content: center;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #5D17EB;
+    border-radius: 15px;
+    font-weight: bolder;
+}
+
+
+@media screen and (max-width: 768px) {
+    .Formulaire_Inscription_Total {
+        width: 90%; 
+    }
+
+    .Form input {
+        width: 100%;
+    }
+}

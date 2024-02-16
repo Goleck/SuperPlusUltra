@@ -1,0 +1,30 @@
+/* Styles de base */
+.Total_Contact {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(254,101,195);
+    background: linear-gradient(0deg, rgba(254,101,195,1) 0%, rgba(93,23,235,1) 100%);
+    margin-bottom: 10em;
+    border-radius: 20px;
+    font-weight: bolder;
+    margin: 5em;
+}
+
+.Total_Contact h1 {
+    display: flex;
+    flex-direction: column;
+    color: #FFFF;
+    background-color: #1C1A27;
+    border-radius: 15px;
+    padding: 3px;
+}
+
+/* Media queries pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .Total_Contact {
+        margin: 2em;
+    }
+}

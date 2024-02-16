@@ -1,0 +1,66 @@
+/* Styles de base */
+.Admin_Formulaire_Total {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  background: rgb(254,101,195);
+  background: linear-gradient(0deg, rgba(254,101,195,1) 0%, rgba(93,23,235,1) 100%);
+  margin-left: 10em;
+  margin-right: 10em;
+  padding: 1em;
+  margin-bottom: 10em;
+  border-radius: 20px;
+}
+
+.Admin_Formulaire_Total input {
+  font-weight: bolder;
+  color: #000000;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(254,101,195);
+  border-radius: 20px;
+}
+
+input::placeholder {
+  color: #FFFF;
+  font-weight: bolder;
+}
+
+.Admin_Formulaire_Total button {
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #5D17EB;
+  border-radius: 15px;
+  font-weight: bolder;
+}
+
+.LForm,
+.RForm {
+  width: 50%;
+  margin: 0 auto; 
+}
+
+.LForm {
+  float: none; 
+}
+
+.RForm {
+  float: none; 
+}
+
+/* Media queries pour les petits écrans */
+@media screen and (max-width: 768px) {
+  .Admin_Formulaire_Total {
+      flex-direction: column; 
+      margin-left: 2em; 
+      margin-right: 2em; 
+  }
+
+  .LForm,
+  .RForm {
+      width: 100%; 
+  }
+}

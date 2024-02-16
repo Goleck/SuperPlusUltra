@@ -1,0 +1,55 @@
+/* Styles de base */
+.Formulaire_Total {
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    background: rgb(254,101,195);
+    background: linear-gradient(0deg, rgba(254,101,195,1) 0%, rgba(93,23,235,1) 100%);
+    margin-left: 20em;
+    margin-right: 20em;
+    padding: 1em;
+    margin-top: 5em;
+    margin-bottom: 10em;
+    border-radius: 20px;
+    background-color: #5D17EB;
+}
+
+.Formulaire_Total input {
+    font-weight: bolder;
+    color: #000000;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(254,101,195);
+    border-radius: 20px;
+}
+
+input::placeholder {
+    color: #FFFF;
+    font-weight: bolder;
+}
+
+.Formulaire_Total button {
+    justify-content: center;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #5D17EB;
+    border-radius: 15px;
+    font-weight: bolder;
+}
+
+/* Media queries pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .Formulaire_Total {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .Formulaire_Total input {
+        width: 80%; 
+    }
+
+    .Formulaire_Total button {
+        width: 80%;
+    }
+}
