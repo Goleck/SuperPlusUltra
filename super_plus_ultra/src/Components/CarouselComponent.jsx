@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Slogan1 from '../Images/INFO1C1.png';
-import Slogan2 from '../Images/INFO2C.png';
-import Slogan3 from '../Images/INFO3C.png';
+import Slogan1 from '../Images/INFO1C1.webp';
+import Slogan2 from '../Images/INFO2C.webp';
+import Slogan3 from '../Images/INFO3C.webp';
 // Style
 import '../Styles/CarouselStyle.css';
 
@@ -23,7 +23,7 @@ const Carousel = () => {
   return (
     <div>
       <div className="Carousel">
-        <img className="Carousel-image" src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
+        <img className="Carousel-image" fetchpriority="low" src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
       </div>
     </div>
   );

@@ -10,3 +10,5 @@ const GlobalContext = createContext({
 });
 
 export default GlobalContext;
+
+

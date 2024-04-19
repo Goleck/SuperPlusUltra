@@ -15,10 +15,15 @@ const app = express();
 const port = 3000; 
 
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+  origin: 'http://localhost:3001', // Autoriser uniquement les requêtes provenant de ce domaine
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Autoriser uniquement ces méthodes
+  credentials: true, 
+}));
   
 app.get("/", (req, res) => {
-  res.send("HELLO!"); // super
+  res.send("HELLO!");
 });
 
 app.use("/", jeux);

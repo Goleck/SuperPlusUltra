@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../Images/Logo-Super-Plusv3-.png';
+import logo from '../Images/Logo-Super-Plusv3-.webp';
 import Media1 from '../Images/Media2-.png';
 import Media2 from '../Images/Media3.png';
 import Media3 from '../Images/Media4.png';

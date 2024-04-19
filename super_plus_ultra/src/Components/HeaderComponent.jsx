@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../Images/Logo-Super-Plusv3-.png';
+import logo from '../Images/Logo-Super-Plusv3-.webp';
 import icone_Panier from '../Images/Logo_Panier-.png';
 import icone_Profil from '../Images/Logo_Profil-.png';
 import { useContext } from 'react';
@@ -30,7 +30,7 @@ const Header = () => {
             )}
           <li><Link to='/inscription' className='link_nav'>INSCRIPTION</Link></li>
           {isAuthenticated ? (
-            <li onClick={handleDeconnection} className='link_nav'>DÉCONNEXION</li>
+            <li onClick={handleDeconnection} className='link_nav'>DECONNEXION</li>
           ) : (
             <li><Link to="/connection" className='link_nav'>CONNEXION</Link></li>
           )}

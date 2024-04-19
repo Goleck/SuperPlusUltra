@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const utilisateurServices = require("../Services/UtilisateurServices");
 
+
 router.get("/utilisateur", async (req, res) => {
     try {
         const result = await utilisateurServices.ToutUtilisateurService();
